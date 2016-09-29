@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MovieBookingStoreContainer" CdmEntityContainer="MovieBookingEntities">
+    <EntitySetMapping Name="Bank">
+      <EntityTypeMapping TypeName="MovieBooking.Bank">
+        <MappingFragment StoreEntitySet="Bank">
+          <ScalarProperty Name="cardNumber" ColumnName="cardNumber" />
+          <ScalarProperty Name="cardName" ColumnName="cardName" />
+          <ScalarProperty Name="cardBalance" ColumnName="cardBalance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookingInfo">
+      <EntityTypeMapping TypeName="MovieBooking.BookingInfo">
+        <MappingFragment StoreEntitySet="BookingInfo">
+          <ScalarProperty Name="bookingID" ColumnName="bookingID" />
+          <ScalarProperty Name="movieScheduleID" ColumnName="movieScheduleID" />
+          <ScalarProperty Name="noOfTicket" ColumnName="noOfTicket" />
+          <ScalarProperty Name="totalPrice" ColumnName="totalPrice" />
+          <ScalarProperty Name="ticketPath" ColumnName="ticketPath" />
+          <ScalarProperty Name="emailAddress" ColumnName="emailAddress" />
+          <ScalarProperty Name="contactNo" ColumnName="contactNo" />
+          <ScalarProperty Name="memberID" ColumnName="memberID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookingSeats">
+      <EntityTypeMapping TypeName="MovieBooking.BookingSeats">
+        <MappingFragment StoreEntitySet="BookingSeats">
+          <ScalarProperty Name="bookingSeatID" ColumnName="bookingSeatID" />
+          <ScalarProperty Name="seatPlace" ColumnName="seatPlace" />
+          <ScalarProperty Name="bookingID" ColumnName="bookingID" />
+          <ScalarProperty Name="movieScheduleID" ColumnName="movieScheduleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cinema">
+      <EntityTypeMapping TypeName="MovieBooking.Cinema">
+        <MappingFragment StoreEntitySet="Cinema">
+          <ScalarProperty Name="cinemaID" ColumnName="cinemaID" />
+          <ScalarProperty Name="cinemaName" ColumnName="cinemaName" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="cinemaImage" ColumnName="cinemaImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hall">
+      <EntityTypeMapping TypeName="MovieBooking.Hall">
+        <MappingFragment StoreEntitySet="Hall">
+          <ScalarProperty Name="hallID" ColumnName="hallID" />
+          <ScalarProperty Name="hallName" ColumnName="hallName" />
+          <ScalarProperty Name="cinemaID" ColumnName="cinemaID" />
+          <ScalarProperty Name="hallType" ColumnName="hallType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Movies">
+      <EntityTypeMapping TypeName="MovieBooking.Movies">
+        <MappingFragment StoreEntitySet="Movies">
+          <ScalarProperty Name="movieID" ColumnName="movieID" />
+          <ScalarProperty Name="movieName" ColumnName="movieName" />
+          <ScalarProperty Name="movieImage" ColumnName="movieImage" />
+          <ScalarProperty Name="runTime" ColumnName="runTime" />
+          <ScalarProperty Name="language" ColumnName="language" />
+          <ScalarProperty Name="releaseDate" ColumnName="releaseDate" />
+          <ScalarProperty Name="moviePrice" ColumnName="moviePrice" />
+          <ScalarProperty Name="movieDescription" ColumnName="movieDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MovieSchedule">
+      <EntityTypeMapping TypeName="MovieBooking.MovieSchedule">
+        <MappingFragment StoreEntitySet="MovieSchedule">
+          <ScalarProperty Name="movieScheduleID" ColumnName="movieScheduleID" />
+          <ScalarProperty Name="movieID" ColumnName="movieID" />
+          <ScalarProperty Name="cinemaID" ColumnName="cinemaID" />
+          <ScalarProperty Name="hallID" ColumnName="hallID" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="timeslot" ColumnName="timeslot" />
+          <ScalarProperty Name="movieName" ColumnName="movieName" />
+          <ScalarProperty Name="cinemaName" ColumnName="cinemaName" />
+          <ScalarProperty Name="noOfSeatsAvailable" ColumnName="noOfSeatsAvailable" />
+          <ScalarProperty Name="state" ColumnName="state" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="MovieBooking.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="MovieBooking.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="emailAddress" ColumnName="emailAddress" />
+          <ScalarProperty Name="contactNO" ColumnName="contactNO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="MovieBooking.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="MovieBooking.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="MovieBooking.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="MovieBooking.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MovieBooking.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="MovieBooking.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MovieBooking.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="MovieBooking.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="MovieBooking.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9e5132c933d241c8a809855c46eefcb6" Name="Diagram1">
+        <EntityTypeShape EntityType="SMB_team7_dbModel.Bank" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMB_team7_dbModel.BookingInfo" Width="1.5" PointX="8.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMB_team7_dbModel.BookingSeat" Width="1.5" PointX="10.5" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMB_team7_dbModel.Cinema" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMB_team7_dbModel.Hall" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMB_team7_dbModel.Movy" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMB_team7_dbModel.MovieSchedule" Width="1.5" PointX="6" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMB_team7_dbModel.sysdiagram" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMB_team7_dbModel.User" Width="1.5" PointX="6" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMB_team7_dbModel.TransViw" Width="1.5" PointX="2.75" PointY="8.25" IsExpanded="true" />
+        <AssociationConnector Association="SMB_team7_dbModel.FK_BookingInfo_memberID" ManuallyRouted="false" />
+        <AssociationConnector Association="SMB_team7_dbModel.FK_BookingInfo_movieScheduleID" ManuallyRouted="false" />
+        <AssociationConnector Association="SMB_team7_dbModel.FK_BookingSeats_BookingID" ManuallyRouted="false" />
+        <AssociationConnector Association="SMB_team7_dbModel.FK_BookingSeats_movieScheduleID" ManuallyRouted="false" />
+        <AssociationConnector Association="SMB_team7_dbModel.FK_Hall_cinema" ManuallyRouted="false" />
+        <AssociationConnector Association="SMB_team7_dbModel.FK_MovieSchedule_CinemaId" ManuallyRouted="false" />
+        <AssociationConnector Association="SMB_team7_dbModel.FK_MovieSchedule_MovieId" ManuallyRouted="false" />
+        <AssociationConnector Association="SMB_team7_dbModel.FK_MovieSchedule_HallId" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,74 @@
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\Movie_Team7.dll.config
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\Movie_Team7.dll
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\Movie_Team7.pdb
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\Antlr3.Runtime.dll
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\AspNet.ScriptManager.jQuery.dll
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\DotNetOpenAuth.AspNet.dll
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\DotNetOpenAuth.Core.dll
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\DotNetOpenAuth.OAuth.Consumer.dll
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\DotNetOpenAuth.OAuth.dll
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\DotNetOpenAuth.OpenId.dll
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\EntityFramework.dll
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\EntityFramework.SqlServer.dll
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\Microsoft.AspNet.FriendlyUrls.dll
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\Microsoft.ScriptManager.MSAjax.dll
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\Microsoft.ScriptManager.WebForms.dll
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\Microsoft.Web.Infrastructure.dll
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\System.Web.Optimization.dll
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\System.Web.Providers.dll
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\WebGrease.dll
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\EntityFramework.xml
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\EntityFramework.SqlServer.xml
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\System.Web.Providers.xml
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\DotNetOpenAuth.Core.xml
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\DotNetOpenAuth.OAuth.xml
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\DotNetOpenAuth.OAuth.Consumer.xml
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\DotNetOpenAuth.OpenId.xml
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\DotNetOpenAuth.AspNet.xml
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\Microsoft.AspNet.Membership.OpenAuth.xml
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\bin\Microsoft.AspNet.FriendlyUrls.xml
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\obj\Debug\Movie_Team7.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\obj\Debug\Movie_Team7.dll
+c:\users\user\documents\visual studio 2013\Projects\Movie_Team7\Movie_Team7\obj\Debug\Movie_Team7.pdb
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\Movie_Team7.dll.config
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\Movie_Team7.dll
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\Movie_Team7.pdb
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\Antlr3.Runtime.dll
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\DotNetOpenAuth.Core.dll
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\EntityFramework.dll
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\EntityFramework.SqlServer.dll
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\System.Web.Optimization.dll
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\System.Web.Providers.dll
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\WebGrease.dll
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\EntityFramework.xml
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\EntityFramework.SqlServer.xml
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\System.Web.Providers.xml
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\DotNetOpenAuth.Core.xml
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\Microsoft.AspNet.Membership.OpenAuth.xml
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\obj\Debug\Movie_Team7.csprojResolveAssemblyReference.cache
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\obj\Debug\Movie_Team7.dll
+C:\Users\sony\Desktop\Movie_Team7\Movie_Team7\Movie_Team7\obj\Debug\Movie_Team7.pdb

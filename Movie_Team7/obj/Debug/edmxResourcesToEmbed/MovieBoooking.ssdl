@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MovieBooking.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Bank">
+    <Key>
+      <PropertyRef Name="cardNumber" />
+    </Key>
+    <Property Name="cardNumber" Type="int" Nullable="false" />
+    <Property Name="cardName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="cardBalance" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BookingInfo">
+    <Key>
+      <PropertyRef Name="bookingID" />
+    </Key>
+    <Property Name="bookingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="movieScheduleID" Type="int" Nullable="false" />
+    <Property Name="noOfTicket" Type="int" Nullable="false" />
+    <Property Name="totalPrice" Type="int" Nullable="false" />
+    <Property Name="ticketPath" Type="varchar(max)" Nullable="false" />
+    <Property Name="emailAddress" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="contactNo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="memberID" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BookingSeats">
+    <Key>
+      <PropertyRef Name="bookingSeatID" />
+    </Key>
+    <Property Name="bookingSeatID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="seatPlace" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="bookingID" Type="int" Nullable="false" />
+    <Property Name="movieScheduleID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cinema">
+    <Key>
+      <PropertyRef Name="cinemaID" />
+    </Key>
+    <Property Name="cinemaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cinemaName" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="location" Type="varchar(max)" Nullable="false" />
+    <Property Name="ContactNo" Type="int" Nullable="false" />
+    <Property Name="cinemaImage" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Hall">
+    <Key>
+      <PropertyRef Name="hallID" />
+    </Key>
+    <Property Name="hallID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="hallName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="cinemaID" Type="int" Nullable="false" />
+    <Property Name="hallType" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Movies">
+    <Key>
+      <PropertyRef Name="movieID" />
+    </Key>
+    <Property Name="movieID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="movieName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="movieImage" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="runTime" Type="int" Nullable="false" />
+    <Property Name="language" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="releaseDate" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="moviePrice" Type="int" Nullable="false" />
+    <Property Name="movieDescription" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MovieSchedule">
+    <Key>
+      <PropertyRef Name="movieScheduleID" />
+    </Key>
+    <Property Name="movieScheduleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="movieID" Type="int" Nullable="false" />
+    <Property Name="cinemaID" Type="int" Nullable="false" />
+    <Property Name="hallID" Type="int" Nullable="false" />
+    <Property Name="date" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="timeslot" Type="int" Nullable="false" />
+    <Property Name="movieName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="cinemaName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="noOfSeatsAvailable" Type="int" Nullable="false" />
+    <Property Name="state" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="userName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emailAddress" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="contactNO" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_BookingInfo_memberID">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="BookingInfo" Type="Self.BookingInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="BookingInfo">
+        <PropertyRef Name="memberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BookingInfo_movieScheduleID">
+    <End Role="MovieSchedule" Type="Self.MovieSchedule" Multiplicity="1" />
+    <End Role="BookingInfo" Type="Self.BookingInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MovieSchedule">
+        <PropertyRef Name="movieScheduleID" />
+      </Principal>
+      <Dependent Role="BookingInfo">
+        <PropertyRef Name="movieScheduleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BookingSeats_BookingID">
+    <End Role="BookingInfo" Type="Self.BookingInfo" Multiplicity="1" />
+    <End Role="BookingSeats" Type="Self.BookingSeats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BookingInfo">
+        <PropertyRef Name="bookingID" />
+      </Principal>
+      <Dependent Role="BookingSeats">
+        <PropertyRef Name="bookingID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BookingSeats_movieScheduleID">
+    <End Role="MovieSchedule" Type="Self.MovieSchedule" Multiplicity="1" />
+    <End Role="BookingSeats" Type="Self.BookingSeats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MovieSchedule">
+        <PropertyRef Name="movieScheduleID" />
+      </Principal>
+      <Dependent Role="BookingSeats">
+        <PropertyRef Name="movieScheduleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Hall_cinema">
+    <End Role="Cinema" Type="Self.Cinema" Multiplicity="1" />
+    <End Role="Hall" Type="Self.Hall" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cinema">
+        <PropertyRef Name="cinemaID" />
+      </Principal>
+      <Dependent Role="Hall">
+        <PropertyRef Name="cinemaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MovieSchedule_CinemaId">
+    <End Role="Cinema" Type="Self.Cinema" Multiplicity="1" />
+    <End Role="MovieSchedule" Type="Self.MovieSchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cinema">
+        <PropertyRef Name="cinemaID" />
+      </Principal>
+      <Dependent Role="MovieSchedule">
+        <PropertyRef Name="cinemaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MovieSchedule_HallId">
+    <End Role="MovieSchedule" Type="Self.MovieSchedule" Multiplicity="1" />
+    <End Role="MovieSchedule1" Type="Self.MovieSchedule" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="MovieSchedule">
+        <PropertyRef Name="movieScheduleID" />
+      </Principal>
+      <Dependent Role="MovieSchedule1">
+        <PropertyRef Name="movieScheduleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MovieSchedule_MovieId">
+    <End Role="Movies" Type="Self.Movies" Multiplicity="1" />
+    <End Role="MovieSchedule" Type="Self.MovieSchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Movies">
+        <PropertyRef Name="movieID" />
+      </Principal>
+      <Dependent Role="MovieSchedule">
+        <PropertyRef Name="movieID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="MovieBookingStoreContainer">
+    <EntitySet Name="Bank" EntityType="Self.Bank" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BookingInfo" EntityType="Self.BookingInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BookingSeats" EntityType="Self.BookingSeats" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cinema" EntityType="Self.Cinema" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hall" EntityType="Self.Hall" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Movies" EntityType="Self.Movies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MovieSchedule" EntityType="Self.MovieSchedule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_BookingInfo_memberID" Association="Self.FK_BookingInfo_memberID">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="BookingInfo" EntitySet="BookingInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BookingInfo_movieScheduleID" Association="Self.FK_BookingInfo_movieScheduleID">
+      <End Role="MovieSchedule" EntitySet="MovieSchedule" />
+      <End Role="BookingInfo" EntitySet="BookingInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BookingSeats_BookingID" Association="Self.FK_BookingSeats_BookingID">
+      <End Role="BookingInfo" EntitySet="BookingInfo" />
+      <End Role="BookingSeats" EntitySet="BookingSeats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BookingSeats_movieScheduleID" Association="Self.FK_BookingSeats_movieScheduleID">
+      <End Role="MovieSchedule" EntitySet="MovieSchedule" />
+      <End Role="BookingSeats" EntitySet="BookingSeats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Hall_cinema" Association="Self.FK_Hall_cinema">
+      <End Role="Cinema" EntitySet="Cinema" />
+      <End Role="Hall" EntitySet="Hall" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MovieSchedule_CinemaId" Association="Self.FK_MovieSchedule_CinemaId">
+      <End Role="Cinema" EntitySet="Cinema" />
+      <End Role="MovieSchedule" EntitySet="MovieSchedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MovieSchedule_HallId" Association="Self.FK_MovieSchedule_HallId">
+      <End Role="MovieSchedule" EntitySet="MovieSchedule" />
+      <End Role="MovieSchedule1" EntitySet="MovieSchedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MovieSchedule_MovieId" Association="Self.FK_MovieSchedule_MovieId">
+      <End Role="Movies" EntitySet="Movies" />
+      <End Role="MovieSchedule" EntitySet="MovieSchedule" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
